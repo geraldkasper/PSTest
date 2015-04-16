@@ -1,0 +1,2 @@
+﻿Get-VM -ComputerName $env:ComputerName|ForEach-Object {Remove-VMSnapshot -VMName $_.Name}
+Get-VM -ComputerName $env:ComputerName|ForEach-Object {Checkpoint-VM  -Name $_.Name -SnapshotName "September Patching"}
